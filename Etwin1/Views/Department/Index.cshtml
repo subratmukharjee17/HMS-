@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @section scripts {
+        <script type="text/javascript">
+            $(document).ready(function () {
+                loadData();
+            });
+
+            //Load Data function
+            function loadData() {
+
+                $.ajax({
+                    url: "/Department/DepartmentView",
+                    type: "GET",
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+
+                        var html = '';
+                        $.each(response, function (key, item) {
+                            html += '<tr>';
+                            html += '<td>' + item.Code + '</td>';
+                            html += '<td>' + item.Name + '</td>';
+                            html += '<td>' + item.Description + '</td>';
+                            html += '<td>' + item.CreationeDate + '</td>';
+                            html += '<td><a href="#">Edit</a> | <a href="#">Delete</a></td>';
+                            html += '</tr>';
+                        });
+                        $('.tbody').html(html);
+                    },
+                    error: function (errormessage) {
+                        alert(errormessage.responseText);
+                    }
+                });
+            }
+
+
+        </script>
+    }
+
+</head>
+<body>
+    <div class="container">
+        <h2>Department Record</h2>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Code
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Creation Date
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>
