@@ -14,7 +14,6 @@ namespace Etwin.BAL.Services
 
         public readonly IAuthenticateLogin _repository;
         public AuthenticationService(IAuthenticateLogin repository)
-        
         { 
         _repository= repository;
         }

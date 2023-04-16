@@ -18,6 +18,7 @@ namespace Etwin.DAL.DataRepository
             _entity = _context.Set<T>();
         }
 
+       
 
         public IEnumerable<T> GetAll()
         {

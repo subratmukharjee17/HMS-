@@ -189,27 +189,33 @@ h6 {
         height: 70px;
     }
 
-    #header .logo {
-        font-size: 30px;
-        margin: 0;
-        padding: 0;
-        line-height: 1;
-        font-weight: 600;
-        letter-spacing: 0.8px;
-        font-family: 'Roboto Condensed', sans-serif;
+.login_form input.form-control:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+#header .logo {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+    #header .logo a {
+        color: #191919;
     }
 
-        #header .logo a {
-            color: #191919;
+        #header .logo a span {
+            color: #ff330d;
         }
 
-            #header .logo a span {
-                color: #ff330d;
-            }
+    #header .logo img {
+        max-height: 40px;
+    }
 
-        #header .logo img {
-            max-height: 40px;
-        }
 
 .scrolled-offset {
     margin-top: 70px;
@@ -478,7 +484,7 @@ h6 {
 #hero {
     width: 100%;
     height: 75vh;
-    background: url("../images/hero-bg.jpg") right center;
+    background: url("../img/hero-bg.jpg") right center;
     background-size: cover;
     position: relative;
 }
@@ -1886,18 +1892,24 @@ li.login {
 }
 
 .login_form .form-group {
-    margin: 0px 0px;
+    margin: 0px 20px;
 }
 
 .login_form input.form-check-inline {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     margin-right: 5px;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none !important;
 }
 
 .login_form label.rme_class {
     vertical-align: top;
     color: #191919;
+    font-size: 0.9em;
 }
 
 .login_form {
@@ -1925,8 +1937,12 @@ li.login {
 a.forgot_pwd {
     color: #136dc8;
     text-decoration: underline;
+    font-size: 0.9em;
 }
 
+.follow_block h4 {
+    font-size: 1.2em;
+}
 
 .user_icon {
     position: relative;
@@ -1934,40 +1950,40 @@ a.forgot_pwd {
 
     .user_icon:before {
         content: '';
-        background-image: url(../images/user_icon.svg);
+        background-image: url(../img/user_icon.svg);
         width: 30px;
         height: 30px;
         position: absolute;
         right: 100px;
         background-size: cover;
-        top: 5px;
+        top: 10px;
     }
 
 .password_icon {
     position: relative;
 }
 
-.password_icon:before {
-    content: '';
-    background-image: url(../images/password_icon.svg);
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 100px;
-    background-size: cover;
-    top: 5px;
-}
+    .password_icon:before {
+        content: '';
+        background-image: url(../img/password_icon.svg);
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 100px;
+        background-size: cover;
+        top: 10px;
+    }
 
-.password_icon::after {
-    content: '';
-    background-image: url(../images/view.svg);
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 100px;
-    background-size: cover;
-    top: 10px;
-}
+    .password_icon::after {
+        content: '';
+        background-image: url(../img/view.svg);
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 100px;
+        background-size: cover;
+        top: 10px;
+    }
 
 .follow_block {
     width: 100%;
@@ -1975,17 +1991,17 @@ a.forgot_pwd {
     margin: 0px auto;
 }
 
-.follow_block ul {
-list-style: none;
-display: inline-block;
-margin: 0px;
-padding: 0px;
-}
+    .follow_block ul {
+        list-style: none;
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+    }
 
-.follow_block ul li {
-    display: inline-block;
-    padding: 0px 10px;
-}
+        .follow_block ul li {
+            display: inline-block;
+            padding: 0px 10px;
+        }
 
 .back_block {
     background-color: #ededed;
@@ -1995,3 +2011,7 @@ padding: 0px;
         width: 50px;
         height: 50px;
     }
+
+.login_btn a {
+    color: #fff;
+}

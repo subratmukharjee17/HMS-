@@ -216,6 +216,7 @@ h6 {
         max-height: 40px;
     }
 
+
 .scrolled-offset {
     margin-top: 70px;
 }
@@ -1898,6 +1899,11 @@ li.login {
     width: 16px;
     height: 16px;
     margin-right: 5px;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none !important;
 }
 
 .login_form label.rme_class {

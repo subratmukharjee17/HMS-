@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Etwin.DAL\Etwin.DAL.csproj" />
+    <ProjectReference Include="..\Etwin.Helper\Etwin.Helper.csproj" />
+    <ProjectReference Include="..\Etwin.Model\Etwin.Model.csproj" />
   </ItemGroup>
 
 </Project>
