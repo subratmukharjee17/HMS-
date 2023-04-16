@@ -23,6 +23,13 @@ namespace Etwin.Controllers
             var result = _genericRepository.GetAll();
             return Json(result, new JsonSerializerOptions());
         }
+        public IActionResult GetDepatment()
+        {
+            var data = TempData["Key"];
+            TempData.Keep("Key");
+            return View();
+
+        }
 
     }
 }

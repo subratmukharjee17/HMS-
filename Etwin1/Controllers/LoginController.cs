@@ -7,7 +7,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using System.Net.Http;
-
 using System.Web;
 
 
@@ -68,6 +67,7 @@ namespace Etwin1.Controllers
         {
             return View();
         }
+
         public async Task<ActionResult> PasswordRecoveryEmail(string emailId)
         {
            

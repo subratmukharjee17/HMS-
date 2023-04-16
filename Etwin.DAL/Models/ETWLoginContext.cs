@@ -15,8 +15,9 @@ namespace EtwLogin.Models
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.Entity<Operators>(entity => {
-                entity.HasKey(k => k.IdOperator);
+            builder.Entity<Operators>(entity =>
+            {
+                entity.HasKey(k => k.Username);
             });
         }
         public DbSet<Operators> Operators { get; set; }

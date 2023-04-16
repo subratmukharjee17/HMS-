@@ -52,6 +52,9 @@
                                         password?
                                     </a>
                                 </div>
+                                <div>
+                                    <lable id="lblmessage"></lable>
+                                </div>
                             </div>
                         </div>
                         <!-- <div class="form-group p-2" style="text-align: left;">
@@ -124,6 +127,7 @@
         }).done(function (response) {
             if (response.message != null) {
                alert(response.message)
+              
             }
             else {
                 window.location.href = "/Dashboard/Index";
